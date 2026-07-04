@@ -247,3 +247,545 @@ nav ul li a:hover{
     color:var(--primary);
 
 }
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(rgba(70,0,0,.45),rgba(70,0,0,.45)),
+                url("assets/images/hero.jpg") center center/cover no-repeat;
+}
+
+.hero .overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(139,0,0,.20),
+        rgba(0,0,0,.35)
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:10;
+    max-width:900px;
+    padding:30px;
+    color:#fff;
+    animation:fadeUp 1.2s ease;
+}
+
+.hero-content h3{
+
+    font-family:'Tiro Devanagari Marathi',serif;
+    font-size:28px;
+    color:var(--secondary);
+    margin-bottom:18px;
+    letter-spacing:1px;
+
+}
+
+.hero-content h1{
+
+    font-size:64px;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:15px;
+
+}
+
+.hero-content h2{
+
+    font-size:42px;
+    color:var(--secondary);
+    margin-bottom:25px;
+
+}
+
+.hero-content p{
+
+    font-size:20px;
+    line-height:1.8;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:40px;
+
+}
+
+/* Button */
+
+.btn{
+
+    display:inline-block;
+
+    background:linear-gradient(
+        135deg,
+        #FFD700,
+        #FFC107
+    );
+
+    color:#5a0000;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    font-size:18px;
+
+    transition:.35s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.30);
+
+}
+
+/* Decorative Circle */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    border:2px solid rgba(255,255,255,.10);
+
+    border-radius:50%;
+
+    top:-200px;
+    right:-200px;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border:2px solid rgba(255,215,0,.18);
+
+    border-radius:50%;
+
+    bottom:-180px;
+    left:-180px;
+
+}
+
+/* Animation */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.hero-content h1{
+
+font-size:46px;
+
+}
+
+.hero-content h2{
+
+font-size:32px;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding:100px 20px;
+
+}
+
+.hero-content h1{
+
+font-size:34px;
+
+}
+
+.hero-content h2{
+
+font-size:24px;
+
+}
+
+.hero-content h3{
+
+font-size:22px;
+
+}
+
+.hero-content p{
+
+font-size:16px;
+
+}
+
+.btn{
+
+padding:14px 28px;
+font-size:16px;
+
+}
+
+}
+/*=====================================================
+    COUPLE SECTION
+======================================================*/
+
+.couple{
+    background:#fff;
+}
+
+.couple-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.person-card{
+
+    width:340px;
+
+    background:rgba(255,255,255,.92);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    padding:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+    border:2px solid rgba(255,215,0,.25);
+
+}
+
+.person-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.18);
+
+}
+
+.person-card img{
+
+    width:220px;
+    height:220px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:6px solid var(--secondary);
+
+}
+
+.person-card h2{
+
+    margin-top:25px;
+
+    color:var(--primary);
+
+    font-size:32px;
+
+}
+
+.person-card p{
+
+    margin:12px 0;
+
+    color:#777;
+
+    font-size:18px;
+
+}
+
+.person-card h3{
+
+    color:#333;
+
+    margin-top:15px;
+
+}
+
+.person-card span{
+
+    color:#888;
+
+}
+
+/* Heart */
+
+.heart-area{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #ff4d6d,
+        #ff1744
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:34px;
+
+    box-shadow:0 10px 25px rgba(255,0,0,.30);
+
+    animation:heartbeat 1.4s infinite;
+
+}
+
+@keyframes heartbeat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.18);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/*=====================================================
+    INVITATION CARD
+======================================================*/
+
+.invitation{
+
+    background:linear-gradient(
+        135deg,
+        #fffaf2,
+        #fff4dc
+    );
+
+}
+
+.invite-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    background:#fff;
+
+    padding:60px;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.10);
+
+    border-top:6px solid var(--secondary);
+
+}
+
+.invite-box h2{
+
+    font-size:42px;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+.invite-box p{
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#555;
+
+}
+
+/*=====================================================
+    DATE SECTION
+======================================================*/
+
+.date-section{
+
+    text-align:center;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:80px 20px;
+
+}
+
+.date-section h2{
+
+    color:var(--secondary);
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.date-section h1{
+
+    font-size:52px;
+
+    margin-bottom:15px;
+
+}
+
+.date-section h3{
+
+    font-size:24px;
+
+    font-weight:400;
+
+}
+
+/*=====================================================
+    MOBILE
+======================================================*/
+
+@media(max-width:768px){
+
+.person-card{
+
+width:100%;
+
+}
+
+.person-card img{
+
+width:180px;
+height:180px;
+
+}
+
+.person-card h2{
+
+font-size:26px;
+
+}
+
+.heart-area{
+
+margin:15px auto;
+
+}
+
+.invite-box{
+
+padding:35px 25px;
+
+}
+
+.invite-box h2{
+
+font-size:32px;
+
+}
+
+.invite-box p{
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+.date-section h1{
+
+font-size:34px;
+
+}
+
+.date-section h3{
+
+font-size:18px;
+
+}
+
+}

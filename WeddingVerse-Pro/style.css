@@ -789,3 +789,139 @@ font-size:18px;
 }
 
 }
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.countdown{
+    background:#fff;
+    text-align:center;
+}
+
+.countdown h2{
+    color:var(--primary);
+    font-size:42px;
+    margin-bottom:45px;
+}
+
+.countdown-box{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.countdown-box div{
+    width:150px;
+    height:150px;
+    background:linear-gradient(135deg,#8B0000,#b31217);
+    color:#fff;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+    transition:.35s;
+}
+
+.countdown-box div:hover{
+    transform:translateY(-8px);
+}
+
+.countdown-box span{
+    font-size:48px;
+    font-weight:700;
+    color:var(--secondary);
+}
+
+.countdown-box small{
+    margin-top:8px;
+    font-size:18px;
+}
+
+/* =====================================================
+   EVENTS
+===================================================== */
+
+.events{
+    background:#faf7f2;
+}
+
+.event-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.event-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.10);
+    transition:.35s;
+    border-top:5px solid transparent;
+}
+
+.event-card:hover{
+    transform:translateY(-10px);
+    border-color:var(--secondary);
+}
+
+.event-card.active{
+    background:var(--primary);
+    color:#fff;
+}
+
+.event-card.active h3,
+.event-card.active span{
+    color:var(--secondary);
+}
+
+.event-card i{
+    font-size:42px;
+    margin-bottom:20px;
+    color:var(--secondary);
+}
+
+.event-card h3{
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.event-card p{
+    color:#666;
+    margin-bottom:10px;
+}
+
+.event-card.active p{
+    color:#fff;
+}
+
+.event-card span{
+    font-weight:600;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:768px){
+
+.countdown-box div{
+    width:120px;
+    height:120px;
+}
+
+.countdown-box span{
+    font-size:36px;
+}
+
+.countdown h2{
+    font-size:30px;
+}
+
+}
